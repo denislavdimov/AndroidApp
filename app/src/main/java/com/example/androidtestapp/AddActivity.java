@@ -2,14 +2,21 @@ package com.example.androidtestapp;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.androidtestapp.Fragments.IncomeFragment;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AddActivity extends AppCompatActivity {
 
@@ -51,5 +58,19 @@ public class AddActivity extends AppCompatActivity {
                 tabLayout.getTabAt(position).select();
             }
         });
+
+        IncomeFragment incomeFragment = new IncomeFragment();
+        List<Income> list = incomeFragment.incomeList;
+
+        FloatingActionButton fabAddIncome = findViewById(R.id.fabAddButton);
+        fabAddIncome = (FloatingActionButton) findViewById(R.id.fabAddButton);
+        fabAddIncome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                list.add(new Income("Income", "2200"));
+            }
+        });
     }
+
+
 }

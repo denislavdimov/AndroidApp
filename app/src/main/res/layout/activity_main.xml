@@ -58,53 +58,56 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.030" />
 
-    <EditText
+    <TextView
         android:id="@+id/readonly_Income"
         android:layout_width="82dp"
         android:layout_height="48dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="8dp"
         android:inputType="text"
-        android:text="10"
+        android:textSize="20dp"
+        android:text="2300"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/incomeText" />
 
-    <EditText
+    <TextView
         android:id="@+id/readonly_Expenses"
         android:layout_width="99dp"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:inputType="text"
-        android:text="10"
+        android:text="250"
+        android:textSize="20dp"
         app:layout_constraintLeft_toLeftOf="@id/readonly_Income"
         app:layout_constraintStart_toEndOf="@id/readonly_Income"
         app:layout_constraintTop_toBottomOf="@id/expensesText" />
 
-    <EditText
+    <TextView
         android:id="@+id/readonly_Total"
         android:layout_width="99dp"
         android:layout_height="48dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
         android:inputType="text"
-        android:text="10"
-        android:textSize="18sp"
+        android:textSize="20dp"
+        android:text="2050"
         app:layout_constraintStart_toEndOf="@+id/readonly_Expenses"
         app:layout_constraintTop_toBottomOf="@id/totalText" />
 
-    <ImageButton
-        android:id="@+id/button"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
         android:layout_marginTop="490dp"
-        android:contentDescription="AddIcon"
         android:src="@drawable/plusicon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.850" />
 </androidx.constraintlayout.widget.ConstraintLayout>
